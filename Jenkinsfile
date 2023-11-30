@@ -30,5 +30,12 @@ pipeline {
       }
     }
 
+    stage('Deploy') {
+      steps {
+        echo 'Deploying...'
+        sh 'docker push notwld/api-dev:latest'
+      }
+    }
+
   }
 }
